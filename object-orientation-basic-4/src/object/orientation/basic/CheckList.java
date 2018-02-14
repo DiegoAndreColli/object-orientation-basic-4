@@ -17,7 +17,10 @@ public class CheckList {
 
     public void addItemsCheckList(ConferableOrder order) {
         for (ConferableOrderLine line : order.getConferableLines()) {
-            checkList.put(line.getProduct(), line.getQuantity());
+            
+            int actual = checkList.getOrDefault(line.getProduct(), 0);
+            
+            checkList.put(line.getProduct(), line.getQuantity()+actual);
         }
     }
 
