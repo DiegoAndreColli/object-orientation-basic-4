@@ -8,5 +8,5 @@ public interface ConferableOrderLine {
 
     public Product getProduct();
 
-    public Integer getQuantity();
+    public Integer getQuantity();    
 }
