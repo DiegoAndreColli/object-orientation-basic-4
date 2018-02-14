@@ -4,12 +4,12 @@ package object.orientation.basic;
  *
  * @author User
  */
-public class OrderLine {
+public class ProductionLine implements ConferableOrderLine {
 
     private final Product product;
     private final Integer quantity;
 
-    public OrderLine(Product product, Integer quantity) {
+    public ProductionLine(Product product, Integer quantity) {
         this.product = product;
         this.quantity = quantity;
     }
@@ -18,10 +18,12 @@ public class OrderLine {
         return product.getPrice() * quantity;
     }
 
+    @Override
     public Product getProduct() {
         return product;
     }
 
+    @Override
     public Integer getQuantity() {
         return quantity;
     }
