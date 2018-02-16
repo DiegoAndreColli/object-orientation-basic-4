@@ -14,10 +14,6 @@ public class MaintenanceLine implements ConferableOrderLine {
         this.quantity = quantity;
     }
 
-    public Double getLineTotal() {
-        return product.getPrice() * quantity;
-    }
-
     @Override
     public Product getProduct() {
         return product;
