@@ -6,14 +6,14 @@ package object.orientation.basic;
  */
 public class ConferableOrderLine {
 
-    private final String serialNumber;
     private final Product product;
     private final Integer quantity;
+    private final String serialNumber;
 
-    public ConferableOrderLine(String serialNumber, Product product, Integer quantity) {
-        this.serialNumber = serialNumber;
+    public ConferableOrderLine(Product product, Integer quantity, String serialNumber) {
         this.product = product;
         this.quantity = quantity;
+        this.serialNumber = serialNumber;
     }
 
     public String getSerialNumber() {

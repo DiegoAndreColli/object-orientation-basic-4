@@ -9,14 +9,9 @@ import java.util.Objects;
 public class Product {
 
     private String name;
-    private Double price;
 
     public Product(String name, Double value) {
         this.name = name;
-        this.price = value;
-    }
-
-    public Product() {
     }
 
     public String getName() {
@@ -25,14 +20,6 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
     }
 
     @Override
@@ -56,5 +43,4 @@ public class Product {
         return true;
     }
 
-    
 }

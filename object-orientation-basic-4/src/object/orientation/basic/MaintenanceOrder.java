@@ -18,12 +18,12 @@ public class MaintenanceOrder implements ConferableOrder {
     public void setMaintenanceLines(List<MaintenanceLine> maintenanceLines) {
         this.maintenanceLines = maintenanceLines;
     }
-    
+
     @Override
     public List<ConferableOrderLine> getConferableLines() {
         List<ConferableOrderLine> lines = new ArrayList();
         for (MaintenanceLine line : maintenanceLines) {
-            lines.add(new ConferableOrderLine("Serial Number", line.getProduct(), line.getQuantity()));
+            lines.add(new ConferableOrderLine(line.getProduct(), line.getQuantity(), line.getSerialNumber()));
         }
         return lines;
     }

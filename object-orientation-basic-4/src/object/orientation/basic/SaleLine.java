@@ -8,14 +8,16 @@ public class SaleLine {
 
     private final Product product;
     private final Integer quantity;
+    private final Double price;
 
-    public SaleLine(Product product, Integer quantity) {
+    public SaleLine(Product product, Integer quantity, Double price) {
         this.product = product;
         this.quantity = quantity;
+        this.price = price;
     }
 
     public Double getLineTotal() {
-        return product.getPrice() * quantity;
+        return price * quantity;
     }
 
     public Product getProduct() {

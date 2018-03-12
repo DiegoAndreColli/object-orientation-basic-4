@@ -23,7 +23,7 @@ public class SaleOrder implements ConferableOrder {
     public List<ConferableOrderLine> getConferableLines() {
         List<ConferableOrderLine> lines = new ArrayList();
         for (SaleLine line : saleLines) {
-            lines.add(new ConferableOrderLine("Serial Number", line.getProduct(), line.getQuantity()));
+            lines.add(new ConferableOrderLine(line.getProduct(), line.getQuantity(), " - "));
         }
         return lines;
     }
