@@ -23,7 +23,7 @@ public class MaintenanceOrder implements ConferableOrder {
     public List<ConferableOrderLine> getConferableLines() {
         List<ConferableOrderLine> lines = new ArrayList();
         for (MaintenanceLine line : maintenanceLines) {
-            lines.add(new ConferableOrderLine(line.getProduct(), line.getQuantity(), line.getSerialNumber()));
+            lines.add(new ConferableOrderLine(line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
         }
         return lines;
     }

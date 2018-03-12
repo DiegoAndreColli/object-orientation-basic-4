@@ -6,26 +6,21 @@ package object.orientation.basic;
  */
 public class MaintenanceLine {
 
-    private final Product product;
+    private final MaintenanceItem item;
     private final Integer quantity;
-    private final String serialNumber;
-
-    public MaintenanceLine(Product product, String serialNumber) {
-        this.product = product;
+    //other attributes were omitted
+    
+    public MaintenanceLine(MaintenanceItem item) {
+        this.item = item;
         this.quantity = 1;
-        this.serialNumber = serialNumber;
     }
 
-    public Product getProduct() {
-        return product;
+    public MaintenanceItem getItem() {
+        return item;
     }
 
     public Integer getQuantity() {
         return quantity;
-    }
-
-    public String getSerialNumber() {
-        return serialNumber;
     }
 
 }

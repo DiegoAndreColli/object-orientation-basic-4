@@ -6,22 +6,17 @@ package object.orientation.basic;
  */
 public class SaleLine {
 
-    private final Product product;
+    private final SaleItem item;
     private final Integer quantity;
-    private final Double price;
+    //other attributes were omitted
 
-    public SaleLine(Product product, Integer quantity, Double price) {
-        this.product = product;
+    public SaleLine(SaleItem item, Integer quantity) {
+        this.item = item;
         this.quantity = quantity;
-        this.price = price;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
-    public Product getProduct() {
-        return product;
+    public SaleItem getItem() {
+        return item;
     }
 
     public Integer getQuantity() {
