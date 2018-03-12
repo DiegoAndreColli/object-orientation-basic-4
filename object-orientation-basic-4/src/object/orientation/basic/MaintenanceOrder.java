@@ -1,6 +1,7 @@
 package object.orientation.basic;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  * @author User
  */
 public class MaintenanceOrder implements ConferableOrder {
-
+    private Calendar entryDate;
     private List<MaintenanceLine> maintenanceLines;
 
     public List<MaintenanceLine> getMaintenanceLines() {
@@ -23,7 +24,7 @@ public class MaintenanceOrder implements ConferableOrder {
     public List<ConferableOrderLine> getConferableLines() {
         List<ConferableOrderLine> lines = new ArrayList();
         for (MaintenanceLine line : maintenanceLines) {
-            lines.add(new ConferableOrderLine(line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
+            lines.add(new ConferableOrderLine("Maintenance", line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
         }
         return lines;
     }

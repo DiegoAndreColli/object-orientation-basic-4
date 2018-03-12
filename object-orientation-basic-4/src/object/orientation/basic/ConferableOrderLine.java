@@ -9,8 +9,10 @@ public class ConferableOrderLine {
     private final Product product;
     private final Integer quantity;
     private final String serialNumber;
+    private final String action;
 
-    public ConferableOrderLine(Product product, Integer quantity, String serialNumber) {
+    public ConferableOrderLine(String action, Product product, Integer quantity, String serialNumber) {
+        this.action = action;
         this.product = product;
         this.quantity = quantity;
         this.serialNumber = serialNumber;
@@ -26,6 +28,10 @@ public class ConferableOrderLine {
 
     public Integer getQuantity() {
         return quantity;
+    }
+
+    public String getAction() {
+        return action;
     }
 
 }
