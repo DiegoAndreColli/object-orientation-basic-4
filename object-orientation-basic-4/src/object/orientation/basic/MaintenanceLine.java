@@ -10,9 +10,9 @@ public class MaintenanceLine {
     private final Integer quantity;
     private final String serialNumber;
 
-    public MaintenanceLine(Product product, Integer quantity, String serialNumber) {
+    public MaintenanceLine(Product product, String serialNumber) {
         this.product = product;
-        this.quantity = quantity;
+        this.quantity = 1;
         this.serialNumber = serialNumber;
     }
 

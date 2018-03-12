@@ -16,8 +16,8 @@ public class SaleLine {
         this.price = price;
     }
 
-    public Double getLineTotal() {
-        return price * quantity;
+    public Double getPrice() {
+        return price;
     }
 
     public Product getProduct() {

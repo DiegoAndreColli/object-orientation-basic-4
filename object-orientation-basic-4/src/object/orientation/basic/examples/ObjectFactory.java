@@ -28,18 +28,18 @@ public class ObjectFactory {
 
     private static List<MaintenanceLine> getMaintenanceLines() {
         List<MaintenanceLine> list = new ArrayList<>();
-        list.add(new MaintenanceLine(new Product("Microchip", 200.0), 10));
-        list.add(new MaintenanceLine(new Product("Resistor", 1.20), 50));        
-        list.add(new MaintenanceLine(new Product("Processor", 500d), 3));        
+        list.add(new MaintenanceLine(new Product("Microchip"), "123456"));
+        list.add(new MaintenanceLine(new Product("Resistor"), "789456"));
+        list.add(new MaintenanceLine(new Product("Processor"), "456123"));        
         return list;
     }
 
     private static List<SaleLine> getProductionLines() {
         List<SaleLine> list = new ArrayList<>();
-        list.add(new SaleLine(new Product("Microchip", 200.0), 10));
-        list.add(new SaleLine(new Product("Resistor", 2.20), 10));
-        list.add(new SaleLine(new Product("Bicycle", 8000d), 2));
-        list.add(new SaleLine(new Product("Processor", 500d), 3));
+        list.add(new SaleLine(new Product("Microchip"), 10, 200.0));
+        list.add(new SaleLine(new Product("Resistor"), 10, 2.20));
+        list.add(new SaleLine(new Product("Bicycle"), 2, 8000d));
+        list.add(new SaleLine(new Product("Processor"), 3, 500d));
         return list;
     }
     
