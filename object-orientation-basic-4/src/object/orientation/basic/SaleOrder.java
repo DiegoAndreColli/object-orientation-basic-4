@@ -7,22 +7,22 @@ import java.util.List;
  *
  * @author User
  */
-public class MaintenanceOrder implements ConferableOrder {
+public class SaleOrder implements ConferableOrder {
 
-    private List<MaintenanceLine> maintenanceLines;
+    private List<SaleLine> saleLines;
 
-    public List<MaintenanceLine> getMaintenanceLines() {
-        return maintenanceLines;
+    public List<SaleLine> getSaleLines() {
+        return saleLines;
     }
 
-    public void setMaintenanceLines(List<MaintenanceLine> maintenanceLines) {
-        this.maintenanceLines = maintenanceLines;
+    public void setSaleLines(List<SaleLine> saleLines) {
+        this.saleLines = saleLines;
     }
-    
+
     @Override
     public List<ConferableOrderLine> getConferableLines() {
         List<ConferableOrderLine> lines = new ArrayList();
-        for (MaintenanceLine line : maintenanceLines) {
+        for (SaleLine line : saleLines) {
             lines.add(new ConferableOrderLine("Serial Number", line.getProduct(), line.getQuantity()));
         }
         return lines;

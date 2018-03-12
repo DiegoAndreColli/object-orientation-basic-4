@@ -8,5 +8,5 @@ import java.util.List;
  * @author User
  */
 public interface ConferableOrder {    
-    public List<? extends ConferableOrderLine> getConferableLines();
+    public List<ConferableOrderLine> getConferableLines();
 }

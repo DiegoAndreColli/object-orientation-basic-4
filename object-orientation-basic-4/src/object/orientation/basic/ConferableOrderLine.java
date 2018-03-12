@@ -4,9 +4,28 @@ package object.orientation.basic;
  *
  * @author User
  */
-public interface ConferableOrderLine {
+public class ConferableOrderLine {
 
-    public Product getProduct();
+    private final String serialNumber;
+    private final Product product;
+    private final Integer quantity;
 
-    public Integer getQuantity();    
+    public ConferableOrderLine(String serialNumber, Product product, Integer quantity) {
+        this.serialNumber = serialNumber;
+        this.product = product;
+        this.quantity = quantity;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
 }

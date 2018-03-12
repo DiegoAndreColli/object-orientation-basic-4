@@ -4,7 +4,7 @@ package object.orientation.basic;
  *
  * @author User
  */
-public class MaintenanceLine implements ConferableOrderLine {
+public class MaintenanceLine {
 
     private final Product product;
     private final Integer quantity;
@@ -14,12 +14,10 @@ public class MaintenanceLine implements ConferableOrderLine {
         this.quantity = quantity;
     }
 
-    @Override
     public Product getProduct() {
         return product;
     }
 
-    @Override
     public Integer getQuantity() {
         return quantity;
     }

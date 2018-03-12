@@ -15,13 +15,13 @@ public class Start {
 
         CheckList checkList = new CheckList();
 
-        ProductionOrder production = ObjectFactory.getProductions();
+        SaleOrder production = ObjectFactory.getProductions();
         checkList.addItemsCheckList(production);
 
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
         checkList.addItemsCheckList(maintenance);
 
-        ProductionOrder production2 = ObjectFactory.getProductions();
+        SaleOrder production2 = ObjectFactory.getProductions();
         checkList.addItemsCheckList(production2);
 
         checkList.showCheckList();

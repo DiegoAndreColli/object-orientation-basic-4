@@ -3,10 +3,10 @@ package object.orientation.basic.examples;
 import java.util.ArrayList;
 import java.util.List;
 import object.orientation.basic.Product;
-import object.orientation.basic.ProductionOrder;
+import object.orientation.basic.SaleOrder;
 import object.orientation.basic.MaintenanceLine;
 import object.orientation.basic.MaintenanceOrder;
-import object.orientation.basic.ProductionLine;
+import object.orientation.basic.SaleLine;
 
 /**
  *
@@ -20,9 +20,9 @@ public class ObjectFactory {
         return maintenance;
     }
 
-    public static ProductionOrder getProductions() {
-        ProductionOrder production = new ProductionOrder();
-        production.setProductionLines(getProductionLines());
+    public static SaleOrder getProductions() {
+        SaleOrder production = new SaleOrder();
+        production.setSaleLines(getProductionLines());
         return production;
     }
 
@@ -34,12 +34,12 @@ public class ObjectFactory {
         return list;
     }
 
-    private static List<ProductionLine> getProductionLines() {
-        List<ProductionLine> list = new ArrayList<>();
-        list.add(new ProductionLine(new Product("Microchip", 200.0), 10));
-        list.add(new ProductionLine(new Product("Resistor", 2.20), 10));
-        list.add(new ProductionLine(new Product("Bicycle", 8000d), 2));
-        list.add(new ProductionLine(new Product("Processor", 500d), 3));
+    private static List<SaleLine> getProductionLines() {
+        List<SaleLine> list = new ArrayList<>();
+        list.add(new SaleLine(new Product("Microchip", 200.0), 10));
+        list.add(new SaleLine(new Product("Resistor", 2.20), 10));
+        list.add(new SaleLine(new Product("Bicycle", 8000d), 2));
+        list.add(new SaleLine(new Product("Processor", 500d), 3));
         return list;
     }
     
