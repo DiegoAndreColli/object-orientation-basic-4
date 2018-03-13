@@ -38,10 +38,10 @@ public class ObjectFactory {
 
     private static List<SaleLine> getProductionLines() {
         List<SaleLine> list = new ArrayList<>();
-        list.add(new SaleLine(new SaleItem(new Product("Microchip"), 200.0), 10 ));
-        list.add(new SaleLine(new SaleItem(new Product("Resistor"), 2.20), 10 ));
-        list.add(new SaleLine(new SaleItem(new Product("Bicycle"), 8000d), 2 ));
-        list.add(new SaleLine(new SaleItem(new Product("Processor"), 500d), 3 ));        
+        list.add(new SaleLine(new SaleItem(new Product("Microchip"), 200.0), 10));
+        list.add(new SaleLine(new SaleItem(new Product("Resistor"), 2.20), 10));
+        list.add(new SaleLine(new SaleItem(new Product("Board"), 8000d), 2));
+        list.add(new SaleLine(new SaleItem(new Product("Processor"), 500d), 3));        
         return list;
     }
     

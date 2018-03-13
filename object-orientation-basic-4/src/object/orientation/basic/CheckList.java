@@ -21,7 +21,7 @@ public class CheckList {
     }
 
     public void showCheckList() {
-        String headers = String.format("%-10s", "Action")
+        String headers = String.format("%-15s", "Type")
                 .concat(String.format("%15s", "Quantity"))
                 .concat(String.format("%5s", ""))
                 .concat(String.format("%-40s", "Product"))                
@@ -29,9 +29,12 @@ public class CheckList {
                 
         System.out.println(headers+"\n");
         
+        checkList.sort((p1, p2) -> p1.getProduct().getName().compareTo(p2.getProduct().getName()));
+
+        
         for (ConferableOrderLine check : checkList) {        
             
-            String line = String.format("%-10s", check.getAction())
+            String line = String.format("%-15s", check.getAction())
                 .concat(String.format("%15s", check.getQuantity()))
                 .concat(String.format("%5s", ""))
                 .concat(String.format("%-40s", check.getProduct().getName()))

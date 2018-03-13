@@ -18,11 +18,11 @@ public class Start {
         SaleOrder production = ObjectFactory.getProductions();
         checkList.addItemsCheckList(production);
 
-        MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
-        checkList.addItemsCheckList(maintenance);
-
         SaleOrder production2 = ObjectFactory.getProductions();
         checkList.addItemsCheckList(production2);
+
+        MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
+        checkList.addItemsCheckList(maintenance);
 
         checkList.showCheckList();
     }
