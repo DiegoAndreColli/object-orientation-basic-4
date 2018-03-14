@@ -1,5 +1,7 @@
 package object.orientation.basic;
 
+import java.util.ArrayList;
+import java.util.List;
 import object.orientation.basic.examples.ObjectFactory;
 
 /**
@@ -15,16 +17,26 @@ public class Start {
 
         CheckList checkList = new CheckList();
 
-        SaleOrder production = ObjectFactory.getProductions();
-        checkList.addItemsCheckList(production);
+        SaleOrder sale1 = ObjectFactory.getProductions();
+        checkList.addItemsCheckList(sale1);
 
-        SaleOrder production2 = ObjectFactory.getProductions();
-        checkList.addItemsCheckList(production2);
+        SaleOrder sale2 = ObjectFactory.getProductions();
+        checkList.addItemsCheckList(sale2);
 
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
         checkList.addItemsCheckList(maintenance);
 
-        checkList.showCheckList();
+        checkList.showCheckList();        
+        
+        //first approach
+        List<MaintenanceOrder> maintenances = new ArrayList<>();
+        List<SaleOrder> productions = new ArrayList<>();        
+        maintenances.add(maintenance);
+        productions.add(sale1);
+        productions.add(sale2);
+        
+        FirstApproach f = new FirstApproach();
+        f.showCheckin(productions, maintenances);
     }
 
 }

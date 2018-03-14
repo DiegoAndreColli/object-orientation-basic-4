@@ -11,6 +11,7 @@ public class SaleOrder implements ConferableOrder {
     private Double total;
     private Double discount;
     private List<SaleLine> saleLines;
+    //other attributes were omitted
 
     public List<SaleLine> getSaleLines() {
         return saleLines;
