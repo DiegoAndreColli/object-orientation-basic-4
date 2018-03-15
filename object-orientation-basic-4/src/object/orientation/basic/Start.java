@@ -18,13 +18,13 @@ public class Start {
         CheckList checkList = new CheckList();
 
         SaleOrder sale1 = ObjectFactory.getSales();
-        checkList.addItemsCheckList(sale1.getSaleLines());
+        checkList.addLines(sale1.getSaleLines());
 
         SaleOrder sale2 = ObjectFactory.getSales();
-        checkList.addItemsCheckList(sale2.getSaleLines());
+        checkList.addLines(sale2.getSaleLines());
 
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
-        checkList.addItemsCheckList(maintenance.getMaintenanceLines());
+        checkList.addLines(maintenance.getMaintenanceLines());
 
         checkList.showCheckList();        
         

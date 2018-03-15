@@ -9,13 +9,9 @@ import java.util.List;
  */
 public class CheckList {
 
-    private final List<ShippingLine> checkList;
+    private final List<ShippingLine> checkList = new ArrayList<>();
 
-    public CheckList() {
-        this.checkList = new ArrayList<>();
-    }
-
-    public void addItemsCheckList(List<? extends ShippingLine> lines) {        
+    public void addLines(List<? extends ShippingLine> lines) {        
         checkList.addAll(lines);        
     }
 
