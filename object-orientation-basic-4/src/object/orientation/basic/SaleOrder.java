@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author User
  */
-public class SaleOrder implements ConferableOrder {
+public class SaleOrder implements ShippingOrder {
     private Double total;
     private Double discount;
     private List<SaleLine> saleLines;
@@ -22,10 +22,10 @@ public class SaleOrder implements ConferableOrder {
     }
 
     @Override
-    public List<ConferableOrderLine> getConferableLines() {
-        List<ConferableOrderLine> lines = new ArrayList();
+    public List<ShippingLine> getShippingLines() {
+        List<ShippingLine> lines = new ArrayList();
         for (SaleLine line : saleLines) {
-            lines.add(new ConferableOrderLine("Sale", line.getItem().getProduct(), line.getQuantity(), " - "));
+            lines.add(new ShippingLine("Sale", line.getItem().getProduct(), line.getQuantity(), " - "));
         }
         return lines;
     }

@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author User
  */
-public class MaintenanceOrder implements ConferableOrder {
+public class MaintenanceOrder implements ShippingOrder {
     private Calendar entryDate;
     private List<MaintenanceLine> maintenanceLines;
 
@@ -21,10 +21,10 @@ public class MaintenanceOrder implements ConferableOrder {
     }
 
     @Override
-    public List<ConferableOrderLine> getConferableLines() {
-        List<ConferableOrderLine> lines = new ArrayList();
+    public List<ShippingLine> getShippingLines() {
+        List<ShippingLine> lines = new ArrayList();
         for (MaintenanceLine line : maintenanceLines) {
-            lines.add(new ConferableOrderLine("Maintenance", line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
+            lines.add(new ShippingLine("Maintenance", line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
         }
         return lines;
     }

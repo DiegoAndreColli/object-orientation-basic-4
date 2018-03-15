@@ -4,14 +4,14 @@ package object.orientation.basic;
  *
  * @author User
  */
-public class ConferableOrderLine {
+public class ShippingLine {
 
     private final Product product;
     private final Integer quantity;
     private final String serialNumber;
     private final String action;
 
-    public ConferableOrderLine(String action, Product product, Integer quantity, String serialNumber) {
+    public ShippingLine(String action, Product product, Integer quantity, String serialNumber) {
         this.action = action;
         this.product = product;
         this.quantity = quantity;
