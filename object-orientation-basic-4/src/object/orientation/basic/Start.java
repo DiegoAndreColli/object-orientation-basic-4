@@ -33,6 +33,7 @@ public class Start {
         f.addMaintenanceLines(maintenance.getMaintenanceLines());
         f.addSaleLines(sale1.getSaleLines());
         f.addSaleLines(sale2.getSaleLines());
+        f.showCheckList();
     }
 
 }
