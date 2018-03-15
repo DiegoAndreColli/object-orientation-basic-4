@@ -17,10 +17,10 @@ public class Start {
 
         CheckList checkList = new CheckList();
 
-        SaleOrder sale1 = ObjectFactory.getProductions();
+        SaleOrder sale1 = ObjectFactory.getSales();
         checkList.addItemsCheckList(sale1.getSaleLines());
 
-        SaleOrder sale2 = ObjectFactory.getProductions();
+        SaleOrder sale2 = ObjectFactory.getSales();
         checkList.addItemsCheckList(sale2.getSaleLines());
 
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
@@ -29,14 +29,10 @@ public class Start {
         checkList.showCheckList();        
         
         //first approach
-        List<MaintenanceOrder> maintenances = new ArrayList<>();
-        List<SaleOrder> productions = new ArrayList<>();        
-        maintenances.add(maintenance);
-        productions.add(sale1);
-        productions.add(sale2);
-        
         FirstApproach f = new FirstApproach();
-        f.showCheckin(productions, maintenances);
+        f.addMaintenanceLines(maintenance.getMaintenanceLines());
+        f.addSaleLines(sale1.getSaleLines());
+        f.addSaleLines(sale2.getSaleLines());
     }
 
 }

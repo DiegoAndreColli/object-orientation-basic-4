@@ -22,10 +22,10 @@ public class ObjectFactory {
         return maintenance;
     }
 
-    public static SaleOrder getProductions() {
-        SaleOrder production = new SaleOrder();
-        production.setSaleLines(getProductionLines());
-        return production;
+    public static SaleOrder getSales() {
+        SaleOrder sale = new SaleOrder();
+        sale.setSaleLines(getProductionLines());
+        return sale;
     }
 
     private static List<MaintenanceLine> getMaintenanceLines() {
