@@ -1,13 +1,13 @@
 package object.orientation.basic;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author User
  */
-public class SaleOrder implements ShippingOrder {
+public class SaleOrder {
+
     private Double total;
     private Double discount;
     private List<SaleLine> saleLines;
@@ -19,14 +19,5 @@ public class SaleOrder implements ShippingOrder {
 
     public void setSaleLines(List<SaleLine> saleLines) {
         this.saleLines = saleLines;
-    }
-
-    @Override
-    public List<ShippingLine> getShippingLines() {
-        List<ShippingLine> lines = new ArrayList();
-        for (SaleLine line : saleLines) {
-            lines.add(new ShippingLine("Sale", line.getItem().getProduct(), line.getQuantity(), " - "));
-        }
-        return lines;
     }
 }

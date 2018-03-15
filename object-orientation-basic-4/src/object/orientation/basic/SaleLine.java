@@ -4,7 +4,7 @@ package object.orientation.basic;
  *
  * @author User
  */
-public class SaleLine {
+public class SaleLine implements ShippingLine {
 
     private final SaleItem item;
     private final Integer quantity;
@@ -21,6 +21,21 @@ public class SaleLine {
 
     public Integer getQuantity() {
         return quantity;
+    }
+
+    @Override
+    public String getSerialNumber() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Product getProduct() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getAction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

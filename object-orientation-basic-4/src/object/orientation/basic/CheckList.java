@@ -15,8 +15,8 @@ public class CheckList {
         this.checkList = new ArrayList<>();
     }
 
-    public void addItemsCheckList(ShippingOrder order) {        
-        checkList.addAll(order.getShippingLines());        
+    public void addItemsCheckList(List<? extends ShippingLine> lines) {        
+        checkList.addAll(lines);        
     }
 
     public void showCheckList() {

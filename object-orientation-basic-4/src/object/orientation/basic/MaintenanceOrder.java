@@ -1,6 +1,5 @@
 package object.orientation.basic;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -8,9 +7,11 @@ import java.util.List;
  *
  * @author User
  */
-public class MaintenanceOrder implements ShippingOrder {
+public class MaintenanceOrder {
+
     private Calendar entryDate;
     private List<MaintenanceLine> maintenanceLines;
+    //other attributes were omitted
 
     public List<MaintenanceLine> getMaintenanceLines() {
         return maintenanceLines;
@@ -20,12 +21,4 @@ public class MaintenanceOrder implements ShippingOrder {
         this.maintenanceLines = maintenanceLines;
     }
 
-    @Override
-    public List<ShippingLine> getShippingLines() {
-        List<ShippingLine> lines = new ArrayList();
-        for (MaintenanceLine line : maintenanceLines) {
-            lines.add(new ShippingLine("Maintenance", line.getItem().getProduct(), line.getQuantity(), line.getItem().getSerialNumber()));
-        }
-        return lines;
-    }
 }

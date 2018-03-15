@@ -4,34 +4,14 @@ package object.orientation.basic;
  *
  * @author User
  */
-public class ShippingLine {
+public interface ShippingLine {
 
-    private final Product product;
-    private final Integer quantity;
-    private final String serialNumber;
-    private final String action;
+    public String getSerialNumber();
 
-    public ShippingLine(String action, Product product, Integer quantity, String serialNumber) {
-        this.action = action;
-        this.product = product;
-        this.quantity = quantity;
-        this.serialNumber = serialNumber;
-    }
+    public Product getProduct();
 
-    public String getSerialNumber() {
-        return serialNumber;
-    }
+    public Integer getQuantity();
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public String getAction() {
-        return action;
-    }
+    public String getAction();
 
 }
