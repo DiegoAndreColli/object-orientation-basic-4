@@ -19,23 +19,24 @@ public class SaleLine implements ShippingLine {
         return item;
     }
 
+    @Override
     public Integer getQuantity() {
         return quantity;
     }
 
     @Override
     public String getSerialNumber() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return " - ";
     }
 
     @Override
     public Product getProduct() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.item.getProduct();
     }
 
     @Override
     public String getAction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "Sale";
     }
 
 }
