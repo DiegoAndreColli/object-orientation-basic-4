@@ -26,13 +26,23 @@ public class Start {
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
         checkList.addLines(maintenance.getMaintenanceLines());
 
-        checkList.showCheckList();        
+//        checkList.showCheckList();        
         
         //first approach
         FirstApproach f = new FirstApproach();
-        f.addMaintenanceLines(maintenance.getMaintenanceLines());
-        f.addSaleLines(sale1.getSaleLines());
-        f.addSaleLines(sale2.getSaleLines());
+        
+        for (MaintenanceLine line : maintenance.getMaintenanceLines()) {
+            f.addMaintenanceLine(line);
+        }
+        
+        for (SaleLine line : sale1.getSaleLines()) {
+            f.addSaleLine(line);
+        }
+        
+        for (SaleLine line : sale2.getSaleLines()) {
+            f.addSaleLine(line);
+        }
+
         f.showCheckList();
     }
 

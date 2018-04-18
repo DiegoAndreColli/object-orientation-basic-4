@@ -9,20 +9,15 @@ import java.util.List;
  */
 public class FirstApproach {
 
-    private final List<MaintenanceLine> maintenances;
-    private final List<SaleLine> sales;
+    private final List<MaintenanceLine> maintenances= new ArrayList<>();
+    private final List<SaleLine> sales = new ArrayList<>();
 
-    public FirstApproach() {
-        this.maintenances = new ArrayList<>();
-        this.sales = new ArrayList<>();
+    public void addMaintenanceLine(MaintenanceLine line) {
+        maintenances.add(line);
     }
 
-    public void addMaintenanceLines(List<MaintenanceLine> lines) {
-        maintenances.addAll(lines);
-    }
-
-    public void addSaleLines(List<SaleLine> lines) {
-        sales.addAll(lines);
+    public void addSaleLine(SaleLine line) {
+        sales.add(line);
     }
 
     public void showCheckList() {
