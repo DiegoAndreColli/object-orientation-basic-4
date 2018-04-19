@@ -8,11 +8,10 @@ import java.util.List;
  * @author User
  */
 public class CheckList {
-
     private final List<ShippingLine> checkList = new ArrayList<>();
 
-    public void addLines(List<? extends ShippingLine> lines) {        
-        checkList.addAll(lines);        
+    public void addLine(ShippingLine line) {        
+        checkList.add(line);        
     }
 
     public void showCheckList() {

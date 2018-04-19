@@ -18,32 +18,40 @@ public class Start {
         CheckList checkList = new CheckList();
 
         SaleOrder sale1 = ObjectFactory.getSales();
-        checkList.addLines(sale1.getSaleLines());
-
         SaleOrder sale2 = ObjectFactory.getSales();
-        checkList.addLines(sale2.getSaleLines());
-
         MaintenanceOrder maintenance = ObjectFactory.getMaintenances();
-        checkList.addLines(maintenance.getMaintenanceLines());
 
-//        checkList.showCheckList();        
-        
-        //first approach
-        FirstApproach f = new FirstApproach();
-        
         for (MaintenanceLine line : maintenance.getMaintenanceLines()) {
-            f.addMaintenanceLine(line);
+            checkList.addLine(line);
         }
         
         for (SaleLine line : sale1.getSaleLines()) {
-            f.addSaleLine(line);
+            checkList.addLine(line);
         }
         
         for (SaleLine line : sale2.getSaleLines()) {
-            f.addSaleLine(line);
+            checkList.addLine(line);
         }
 
-        f.showCheckList();
+        
+        checkList.showCheckList();        
+//        
+//        //first approach
+//        FirstApproach f = new FirstApproach();
+//        
+//        for (MaintenanceLine line : maintenance.getMaintenanceLines()) {
+//            f.addMaintenanceLine(line);
+//        }
+//        
+//        for (SaleLine line : sale1.getSaleLines()) {
+//            f.addSaleLine(line);
+//        }
+//        
+//        for (SaleLine line : sale2.getSaleLines()) {
+//            f.addSaleLine(line);
+//        }
+//
+//        f.showCheckList();
     }
 
 }

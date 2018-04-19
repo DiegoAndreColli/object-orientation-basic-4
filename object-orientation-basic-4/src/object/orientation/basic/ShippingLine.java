@@ -6,12 +6,14 @@ package object.orientation.basic;
  */
 public interface ShippingLine {
 
-    public String getSerialNumber();
+    Product getProduct();
 
-    public Product getProduct();
+    Integer getQuantity();
 
-    public Integer getQuantity();
-
-    public String getAction();
-
+    String getAction();
+    
+    default String getSerialNumber(){
+         return " - ";
+    }
+    
 }

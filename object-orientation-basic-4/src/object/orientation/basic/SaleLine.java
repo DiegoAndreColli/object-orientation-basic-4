@@ -25,11 +25,6 @@ public class SaleLine implements ShippingLine {
     }
 
     @Override
-    public String getSerialNumber() {
-        return " - ";
-    }
-
-    @Override
     public Product getProduct() {
         return this.item.getProduct();
     }
