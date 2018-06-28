@@ -1,7 +1,5 @@
 package object.orientation.basic;
 
-import java.util.ArrayList;
-import java.util.List;
 import object.orientation.basic.examples.ObjectFactory;
 
 /**
@@ -33,7 +31,6 @@ public class Start {
             checkList.addLine(line);
         }
 
-        
         checkList.showCheckList();        
 //        
 //        //first approach
